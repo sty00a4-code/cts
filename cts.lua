@@ -169,14 +169,3 @@ local function lex(text)
 
     return tokens
 end
-
-local tokens, err = lex([[move up
-turn left
-]])
-if not tokens then
-    print(err)
-    return
-end
-for _, token in ipairs(tokens) do
-    print(token.kind, token.value or "")
-end
